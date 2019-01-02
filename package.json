@@ -1,0 +1,45 @@
+{
+  "main": "webpack.config.js",
+  "scripts": {
+    "clean": "rimraf dist *.vsix vss-extension-release.json src/*js libs",
+    "dev": "webpack-dev-server --hot --progress --colors --content-base ./src --https --port 8888",
+    "dev:http": "webpack-dev-server -d --hot --progress --colors --content-base ./src --port 8888",
+    "package:dev": "node ./scripts/packageDev",
+    "package:dev:http": "node ./scripts/packageDevHttp",
+    "package:release": "node ./scripts/packageRelease",
+    "package:beta": "node ./scripts/packageBeta",
+    "publish:dev": "npm run package:dev && node ./scripts/publishDev",
+    "build:release": "npm run clean && mkdir dist && webpack --progress --colors --output-path ./dist -p",
+    "publish:release": "npm run build:release && node ./scripts/publishRelease",
+    "test": "karma start --single-run",
+    "postinstall": "typings install"
+  },
+  "devDependencies": {
+    "@types/jquery": "^2.0.41",
+    "@types/q": "^1.0.0",
+    "@types/react": "^16.0.9",
+    "@types/react-dom": "^16.0.0",
+    "copy-webpack-plugin": "^4.0.1",
+    "css-loader": "^0.28.0",
+    "rimraf": "^2.6.1",
+    "style-loader": "^0.16.1",
+    "tfx-cli": "^0.4.5",
+    "ts-loader": "^2.0.3",
+    "typescript": "2.7.2",
+    "typings": "^2.1.0",
+    "uglifyjs-webpack-plugin": "^0.4.2",
+    "webpack": "^2.7.0",
+    "webpack-dev-server": "^2.4.2"
+  },
+  "dependencies": {
+    "vss-web-extension-sdk": "5.127.0",
+    "webpack-cli": "^3.1.0",
+    "webpack-command": "^0.4.1"
+  },
+  "name": "multivalue-control-extension",
+  "license": "MIT",
+  "description": "VSTS Work Item Form Multivalue Control Extension",
+  "repository": "",
+  "private": false,
+  "version": "0.0.0"
+}

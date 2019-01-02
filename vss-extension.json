@@ -1,0 +1,112 @@
+{
+    "manifestVersion": 1.0,
+    "id": "cse-vsts-extensions-calculatedfields",
+    "version": "1.1.16",
+    "name": "CSE Calculated Fields",
+    "description": "CSE Calculated Fields",
+    "publisher": "CSETools",
+    "icons": {
+        "default": "img/logo.png"
+    },
+    "categories": [
+        "Plan and track"
+    ],
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "files": [
+        {
+            "path": "dist",
+            "addressable": true
+        },
+        {
+            "path": "img",
+            "addressable": true
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "uri": "https://cseng.visualstudio.com/CSE%20Tools%20and%20Operations/_git/VSTSExtCalculatedFields"
+    },
+    "links": {
+        "home": {
+            "uri": "https://cseng.visualstudio.com/CSE%20Tools%20and%20Operations/_git/VSTSExtCalculatedFields"
+        },
+        "learn": {
+            "uri": "https://cseng.visualstudio.com/CSE%20Tools%20and%20Operations/_git/VSTSExtCalculatedFields"
+        },
+        "repository": {
+            "uri": "https://cseng.visualstudio.com/CSE%20Tools%20and%20Operations/_git/VSTSExtCalculatedFields"
+        },
+        "issues": {
+            "uri": "https://cseng.visualstudio.com/CSE%20Tools%20and%20Operations/_git/VSTSExtCalculatedFields"
+        },
+        "support": {
+            "uri": "https://cseng.visualstudio.com/CSE%20Tools%20and%20Operations/_git/VSTSExtCalculatedFields"
+        }
+    },
+    "tags": [
+        "Work Items",
+        "Extensions",
+        "Work Item Control",
+        "Sample",
+        "Calculated Field Control"
+    ],
+    "content": {
+        "details": {
+            "path": "readme.md"
+        }
+    },
+    "scopes": [
+        "vso.work"
+    ],
+    "contributions": [
+		{
+            "id": "cse-valuemarkers-form-control",
+            "type": "ms.vss-work-web.work-item-form-control",
+            "description": "A work item form control which allows selection of multiple values.",
+            "targets": [
+                "ms.vss-work-web.work-item-form"
+            ],
+            "properties": {
+                "name": "CSE Value Markers Form Control",
+                "uri": "dist/calculatedfields.html",
+                "height": 100,
+				"inputs": [
+				    {
+                        "id":"FieldName",
+                        "name": "Select the field for this control. This will save the calculated value.",
+                        "type": "WorkItemField",
+                        "properties": {
+                            "workItemFieldTypes": ["String", "Decimal", "Double", "Integer", "PlainText"]
+                        },
+                        "validation": {
+                            "dataType": "String",
+                            "isRequired": true
+                        }
+                    },
+                    {
+                        "id":"Formula",
+                        "name": "Insert the formula",
+                        "description": "Fields should be enclosed on square brackets",
+                        "validation": {
+                            "dataType": "String",
+                            "isRequired": true
+                        }
+                    },
+                    {
+                        "id":"RequireAllFields",
+                        "name": "Require value on all the fields of  the formula to continue (true/false)",
+                        "description": "If is not required missing fields will be converted to zero (0)",
+                        "validation": {
+                            "dataType": "Boolean",
+                            "isRequired": false
+                        }
+                    }
+				]
+            }
+        }
+    ]
+}
