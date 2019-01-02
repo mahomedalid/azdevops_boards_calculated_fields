@@ -9,15 +9,11 @@ Navigate to your work item form customization page and add a CSE calculated fiel
 
 ![Definition](img/definition.png)
 
-Edit the control so it can use the right field to store your final value and the formula. Currently only simple formulas is supported, example:
+Edit the control so it can use the right field to store your final value and the formula. It supports formulas on the javascript notation, example:
 
-> Custom.MyField * 2.5 + Custom.MyField2 + Custom.MyField3 * 2 + Custom.Myfield4
+> [Custom.MyField] * 2.5 + [Custom.MyField2] + (([Custom.MyField3] * 2) / 2) + Custom.Myfield4
 
-It only supports:
-
-1. Factors, specify the factor by "* <factor>"
-2. Summatory, specify the summatory by "+"
-3. Integer or Decimal fields, specify the fields by the fully qualified name "Prefix.FieldName"
+Specify the fields by the fully qualified name "Prefix.FieldName" and enclosed on square brackets []
 
 # How to query
 
