@@ -35,4 +35,4 @@ We appreciate your feedback! Here are some ways to connect with us:
 
 * Add a github issue.
 
-> CSE Tools team is a internal Microsoft Team part of the Commercial Software Engineering group. Solutions in this category are designed for broad usage, and you are encouraged to use and provide feedback on them; however, these extensions are not supported nor are any commitments made as to their longevity.
+> This is a personal project. Feedback is appreciated, however, this extension is not supported nor are any commitments made as to their longevity.
