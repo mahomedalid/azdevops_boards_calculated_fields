@@ -1,10 +1,10 @@
 {
     "manifestVersion": 1.0,
-    "id": "cse-vsts-extensions-calculatedfields",
+    "id": "azdo-extensions-calculatedfields",
     "version": "1.1.16",
-    "name": "CSE Calculated Fields",
-    "description": "CSE Calculated Fields",
-    "publisher": "CSETools",
+    "name": "Calculated Fields",
+    "description": "Calculated Fields",
+    "publisher": "CSE Tools",
     "icons": {
         "default": "img/logo.png"
     },
@@ -28,23 +28,23 @@
     ],
     "repository": {
         "type": "git",
-        "uri": "https://cseng.visualstudio.com/CSE%20Tools%20and%20Operations/_git/VSTSExtCalculatedFields"
+        "uri": "https://github.com/mahomedalid/azdevops_boards_calculated_fields"
     },
     "links": {
         "home": {
-            "uri": "https://cseng.visualstudio.com/CSE%20Tools%20and%20Operations/_git/VSTSExtCalculatedFields"
+            "uri": "https://github.com/mahomedalid/azdevops_boards_calculated_fields"
         },
         "learn": {
-            "uri": "https://cseng.visualstudio.com/CSE%20Tools%20and%20Operations/_git/VSTSExtCalculatedFields"
+            "uri": "https://github.com/mahomedalid/azdevops_boards_calculated_fields"
         },
         "repository": {
-            "uri": "https://cseng.visualstudio.com/CSE%20Tools%20and%20Operations/_git/VSTSExtCalculatedFields"
+            "uri": "https://github.com/mahomedalid/azdevops_boards_calculated_fields"
         },
         "issues": {
-            "uri": "https://cseng.visualstudio.com/CSE%20Tools%20and%20Operations/_git/VSTSExtCalculatedFields"
+            "uri": "https://github.com/mahomedalid/azdevops_boards_calculated_fields"
         },
         "support": {
-            "uri": "https://cseng.visualstudio.com/CSE%20Tools%20and%20Operations/_git/VSTSExtCalculatedFields"
+            "uri": "https://github.com/mahomedalid/azdevops_boards_calculated_fields"
         }
     },
     "tags": [
@@ -64,14 +64,14 @@
     ],
     "contributions": [
 		{
-            "id": "cse-valuemarkers-form-control",
+            "id": "csetools-calculated-fields",
             "type": "ms.vss-work-web.work-item-form-control",
-            "description": "A work item form control which allows selection of multiple values.",
+            "description": "A work item form control which allows formulas for fields.",
             "targets": [
                 "ms.vss-work-web.work-item-form"
             ],
             "properties": {
-                "name": "CSE Value Markers Form Control",
+                "name": "Calculated Fields Form Control",
                 "uri": "dist/calculatedfields.html",
                 "height": 100,
 				"inputs": [
