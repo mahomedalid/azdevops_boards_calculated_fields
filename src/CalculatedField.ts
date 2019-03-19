@@ -90,8 +90,8 @@ export class CalculatedField extends BaseCalculatedField {
                 } else {
                     finalScore = eval(formula);
                     var roundedScore = Math.round(finalScore * 100) / 100; // Round to two
-                    this.setMessage(roundedScore.toString());
-                    this.setValue(roundedScore.toString());
+                    this.setMessage(roundedScore.toLocaleString());
+                    this.setValue(roundedScore.toLocaleString());
                     this.resize();
                     this.flush();
                 }
